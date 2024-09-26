@@ -1,0 +1,28 @@
+services:
+  app-3:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: app-3
+    image: base-3
+    volumes:
+      - ./:/var/www
+    ports:
+      - "8003:8003"
+    networks:
+      - shared-net
+
+  nginx-3:
+    image: nginx:alpine
+    container_name: nginx-3
+    ports:
+      - "8083:8083"
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - shared-net
+
+networks:
+  shared-net:
+    external: true
