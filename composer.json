@@ -7,7 +7,9 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.9",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "karlis/module1": "dev-main",
+        "karlis/module2": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -46,9 +48,27 @@
             "@php artisan migrate --graceful --ansi"
         ]
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Karlis-Juskovs/common-module"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Karlis-Juskovs/news-module"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Karlis-Juskovs/book-module"
+        }
+    ],
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "providers": [
+                "Karlis\\Module1\\Module1ServiceProvider",
+                "Karlis\\Module2\\Module2ServiceProvider"
+            ],
+            "aliases": {}
         }
     },
     "config": {
@@ -60,6 +80,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }

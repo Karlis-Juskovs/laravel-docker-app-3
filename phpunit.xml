@@ -11,6 +11,12 @@
         <testsuite name="Feature">
             <directory>tests/Feature</directory>
         </testsuite>
+        <testsuite name="Module1Tests">
+            <directory>vendor/karlis/module1/src/tests/Feature</directory>
+        </testsuite>
+        <testsuite name="Module2Tests">
+            <directory>vendor/karlis/module2/src/tests/Feature</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>

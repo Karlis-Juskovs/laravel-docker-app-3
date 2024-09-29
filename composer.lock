@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e8c3c14ff33b199b4a0838993eb8423",
+    "content-hash": "6cd01f2c04f3f8933fd4b96d70d7d9e7",
     "packages": [
         {
             "name": "brick/math",
@@ -1051,17 +1051,142 @@
             "time": "2023-12-03T19:50:20+00:00"
         },
         {
-            "name": "laravel/framework",
-            "version": "v11.24.1",
+            "name": "karlis/common-module",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "e063fa80ac5818099f45a3a57dd803476c8f3a2a"
+                "url": "https://github.com/Karlis-Juskovs/common-module.git",
+                "reference": "bec118f48f73544d22a540fb1b490378677fbd88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/e063fa80ac5818099f45a3a57dd803476c8f3a2a",
-                "reference": "e063fa80ac5818099f45a3a57dd803476c8f3a2a",
+                "url": "https://api.github.com/repos/Karlis-Juskovs/common-module/zipball/bec118f48f73544d22a540fb1b490378677fbd88",
+                "reference": "bec118f48f73544d22a540fb1b490378677fbd88",
+                "shasum": ""
+            },
+            "require": {
+                "nesbot/carbon": "^3.8",
+                "php": "^8.2"
+            },
+            "default-branch": true,
+            "type": "module",
+            "autoload": {
+                "psr-4": {
+                    "CommonModule\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "KarlisJ",
+                    "email": "karlis.juskovs@gmail.com"
+                }
+            ],
+            "description": "A common module with helper methods used by module1 and module2",
+            "support": {
+                "source": "https://github.com/Karlis-Juskovs/common-module/tree/main",
+                "issues": "https://github.com/Karlis-Juskovs/common-module/issues"
+            },
+            "time": "2024-09-29T09:58:07+00:00"
+        },
+        {
+            "name": "karlis/module1",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Karlis-Juskovs/news-module.git",
+                "reference": "f404a9d0d9d610732333f3d1a596bdf6ec64357f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Karlis-Juskovs/news-module/zipball/f404a9d0d9d610732333f3d1a596bdf6ec64357f",
+                "reference": "f404a9d0d9d610732333f3d1a596bdf6ec64357f",
+                "shasum": ""
+            },
+            "require": {
+                "karlis/common-module": "dev-main",
+                "laravel/framework": "^11.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^9.5",
+                "phpunit/phpunit": "^11.3"
+            },
+            "default-branch": true,
+            "type": "module",
+            "autoload": {
+                "psr-4": {
+                    "Karlis\\Module1\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "KarlisJ",
+                    "email": "karlis.juskovs@gmail.com"
+                }
+            ],
+            "description": "This will be more simplistic module to test more basic concepts",
+            "support": {
+                "source": "https://github.com/Karlis-Juskovs/news-module/tree/main",
+                "issues": "https://github.com/Karlis-Juskovs/news-module/issues"
+            },
+            "time": "2024-09-29T11:50:38+00:00"
+        },
+        {
+            "name": "karlis/module2",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Karlis-Juskovs/book-module.git",
+                "reference": "112cc8ab954cc25e5fc54ed3a79bda210eb4eb7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Karlis-Juskovs/book-module/zipball/112cc8ab954cc25e5fc54ed3a79bda210eb4eb7a",
+                "reference": "112cc8ab954cc25e5fc54ed3a79bda210eb4eb7a",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.9",
+                "karlis/common-module": "dev-main",
+                "laravel/framework": "^11.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^9.5",
+                "phpunit/phpunit": "^11.3"
+            },
+            "default-branch": true,
+            "type": "module",
+            "autoload": {
+                "psr-4": {
+                    "Karlis\\Module2\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "KarlisJ",
+                    "email": "karlis.juskovs@gmail.com"
+                }
+            ],
+            "description": "A bit more complex module, with 2 models, dispatchable job etc",
+            "support": {
+                "source": "https://github.com/Karlis-Juskovs/book-module/tree/main",
+                "issues": "https://github.com/Karlis-Juskovs/book-module/issues"
+            },
+            "time": "2024-09-29T12:28:52+00:00"
+        },
+        {
+            "name": "laravel/framework",
+            "version": "v11.25.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "b487a9089c0b1c71ac63bb6bc44fb4b00dc6da2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/b487a9089c0b1c71ac63bb6bc44fb4b00dc6da2e",
+                "reference": "b487a9089c0b1c71ac63bb6bc44fb4b00dc6da2e",
                 "shasum": ""
             },
             "require": {
@@ -1257,7 +1382,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-09-25T07:21:24+00:00"
+            "time": "2024-09-26T11:21:58+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -1634,16 +1759,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.28.0",
+            "version": "3.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "e611adab2b1ae2e3072fa72d62c62f52c2bf1f0c"
+                "reference": "0adc0d9a51852e170e0028a60bd271726626d3f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/e611adab2b1ae2e3072fa72d62c62f52c2bf1f0c",
-                "reference": "e611adab2b1ae2e3072fa72d62c62f52c2bf1f0c",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/0adc0d9a51852e170e0028a60bd271726626d3f0",
+                "reference": "0adc0d9a51852e170e0028a60bd271726626d3f0",
                 "shasum": ""
             },
             "require": {
@@ -1711,22 +1836,22 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.28.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.29.0"
             },
-            "time": "2024-05-22T10:09:12+00:00"
+            "time": "2024-09-29T11:59:11+00:00"
         },
         {
             "name": "league/flysystem-local",
-            "version": "3.28.0",
+            "version": "3.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-local.git",
-                "reference": "13f22ea8be526ea58c2ddff9e158ef7c296e4f40"
+                "reference": "e0e8d52ce4b2ed154148453d321e97c8e931bd27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/13f22ea8be526ea58c2ddff9e158ef7c296e4f40",
-                "reference": "13f22ea8be526ea58c2ddff9e158ef7c296e4f40",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/e0e8d52ce4b2ed154148453d321e97c8e931bd27",
+                "reference": "e0e8d52ce4b2ed154148453d321e97c8e931bd27",
                 "shasum": ""
             },
             "require": {
@@ -1760,9 +1885,9 @@
                 "local"
             ],
             "support": {
-                "source": "https://github.com/thephpleague/flysystem-local/tree/3.28.0"
+                "source": "https://github.com/thephpleague/flysystem-local/tree/3.29.0"
             },
-            "time": "2024-05-06T20:05:52+00:00"
+            "time": "2024-08-09T21:24:39+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -7750,8 +7875,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "karlis/module1": 20,
+        "karlis/module2": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
